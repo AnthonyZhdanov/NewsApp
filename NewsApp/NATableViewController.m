@@ -44,7 +44,13 @@
 }
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *stringWithCategory = self.arrayOfConst[indexPath.row];
+    NSString *stringWithCategory;
+    if ([self.arrayOfConst[indexPath.row] isEqualToString:@"all"]) {
+        stringWithCategory = @"";
+    }
+    else {
+        stringWithCategory = self.arrayOfConst[indexPath.row];
+    }
     NSString *string = [NSString stringWithFormat:@"%@%@", kSeparateCategory, stringWithCategory];
     [self.mainViewControllerInstance loadDataFromOutside:string];
     //hide sidebar after action

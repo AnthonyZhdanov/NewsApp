@@ -62,7 +62,10 @@
 - (void)updateTableView {
     //getting data from storage and then reloading tableView
     self.arrayOfArticles = [[NANewsAPI sharedInstance] loadedData];
-    [self.articlesTableView reloadData];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        //reload visible part of tableView
+        [self.articlesTableView reloadData];
+    });
     [self.articlesLoadingActivityIndicator stopAnimating];
 }
 

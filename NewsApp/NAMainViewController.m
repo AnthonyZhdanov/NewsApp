@@ -75,7 +75,10 @@
 - (void)updateTableView {
     //getting data from storage and then reloading tableView
     self.newsArray = [[NANewsAPI sharedInstance] loadedData];
-    [self.tableView reloadData];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        //reload visible part of tableView
+        [self.tableView reloadData];
+    });
     [self.loadingActivityIndicator stopAnimating];
 }
 #pragma mark - UITableViewDataSource

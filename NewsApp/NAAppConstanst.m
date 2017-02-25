@@ -17,7 +17,7 @@ NSString *const kSeparateCategory = @"https://newsapi.org/v1/sources?category=";
 NSString *const kApiKey = @"&apiKey=262fcd3d295b4304ba053ac59ef70492"; //mine key for API
 NSString *const kSortingTypeLatest = @"&sortBy=latest";
 //All poossible categories: business, entertainment, gaming, general, music, science-and-nature, sport, technology.
-NSString *const kAllCategories = @"";
+NSString *const kAllCategories = @"all";
 NSString *const kBusiness = @"business";
 NSString *const kEntertainment = @"entertainment";
 NSString *const kGaming = @"gaming";
