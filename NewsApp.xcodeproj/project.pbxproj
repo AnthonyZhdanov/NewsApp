@@ -1,0 +1,518 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C6D54CDF1E5EF84E00DA1CDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D54CDE1E5EF84E00DA1CDE /* main.m */; };
+		C6D54CE21E5EF84E00DA1CDE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D54CE11E5EF84E00DA1CDE /* AppDelegate.m */; };
+		C6D54CE51E5EF84E00DA1CDE /* NAMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D54CE41E5EF84E00DA1CDE /* NAMainViewController.m */; };
+		C6D54CE81E5EF84F00DA1CDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6D54CE61E5EF84F00DA1CDE /* Main.storyboard */; };
+		C6D54CEA1E5EF84F00DA1CDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6D54CE91E5EF84F00DA1CDE /* Assets.xcassets */; };
+		C6D54CED1E5EF84F00DA1CDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6D54CEB1E5EF84F00DA1CDE /* LaunchScreen.storyboard */; };
+		C6D54E5B1E5F055300DA1CDE /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D54E5A1E5F055300DA1CDE /* AFNetworking.framework */; };
+		C6D54E611E5F0BBC00DA1CDE /* NANewsAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D54E601E5F0BBC00DA1CDE /* NANewsAPI.m */; };
+		C6D54E661E5F0C1000DA1CDE /* NAWebServices.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D54E651E5F0C1000DA1CDE /* NAWebServices.m */; };
+		C6D54E6A1E5F240C00DA1CDE /* NATableViewCellOnMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D54E691E5F240C00DA1CDE /* NATableViewCellOnMainViewController.m */; };
+		C6D54E6D1E5F3A2000DA1CDE /* NADataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D54E6C1E5F3A2000DA1CDE /* NADataManager.m */; };
+		C6D54E711E5FBE4F00DA1CDE /* NAAppConstanst.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D54E701E5FBE4F00DA1CDE /* NAAppConstanst.m */; };
+		C6D54E771E607BEF00DA1CDE /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D54E761E607BEF00DA1CDE /* SWRevealViewController.m */; };
+		C6D54E7D1E60868A00DA1CDE /* NATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D54E7C1E60868A00DA1CDE /* NATableViewController.m */; };
+		C6D54E821E60A2D700DA1CDE /* NATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D54E811E60A2D700DA1CDE /* NATableViewCell.m */; };
+		C6D54E851E60E66B00DA1CDE /* NAArticlesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D54E841E60E66B00DA1CDE /* NAArticlesViewController.m */; };
+		C6D54E881E60E8B600DA1CDE /* NATableViewCellOnArticlesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D54E871E60E8B600DA1CDE /* NATableViewCellOnArticlesViewController.m */; };
+		C6FD624D1E619FA5006DAB0C /* NAWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD624C1E619FA5006DAB0C /* NAWebViewViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C6D54CDA1E5EF84E00DA1CDE /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6D54CDE1E5EF84E00DA1CDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C6D54CE01E5EF84E00DA1CDE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C6D54CE11E5EF84E00DA1CDE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C6D54CE31E5EF84E00DA1CDE /* NAMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NAMainViewController.h; sourceTree = "<group>"; };
+		C6D54CE41E5EF84E00DA1CDE /* NAMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NAMainViewController.m; sourceTree = "<group>"; };
+		C6D54CE71E5EF84F00DA1CDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C6D54CE91E5EF84F00DA1CDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C6D54CEC1E5EF84F00DA1CDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C6D54CEE1E5EF84F00DA1CDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6D54E5A1E5F055300DA1CDE /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
+		C6D54E5F1E5F0BBC00DA1CDE /* NANewsAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NANewsAPI.h; sourceTree = "<group>"; };
+		C6D54E601E5F0BBC00DA1CDE /* NANewsAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NANewsAPI.m; sourceTree = "<group>"; };
+		C6D54E641E5F0C1000DA1CDE /* NAWebServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAWebServices.h; sourceTree = "<group>"; };
+		C6D54E651E5F0C1000DA1CDE /* NAWebServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAWebServices.m; sourceTree = "<group>"; };
+		C6D54E681E5F240C00DA1CDE /* NATableViewCellOnMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATableViewCellOnMainViewController.h; sourceTree = "<group>"; };
+		C6D54E691E5F240C00DA1CDE /* NATableViewCellOnMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NATableViewCellOnMainViewController.m; sourceTree = "<group>"; };
+		C6D54E6B1E5F3A2000DA1CDE /* NADataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADataManager.h; sourceTree = "<group>"; };
+		C6D54E6C1E5F3A2000DA1CDE /* NADataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NADataManager.m; sourceTree = "<group>"; };
+		C6D54E6F1E5FBE4F00DA1CDE /* NAAppConstanst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAAppConstanst.h; sourceTree = "<group>"; };
+		C6D54E701E5FBE4F00DA1CDE /* NAAppConstanst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAAppConstanst.m; sourceTree = "<group>"; };
+		C6D54E751E607BEF00DA1CDE /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		C6D54E761E607BEF00DA1CDE /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		C6D54E7B1E60868A00DA1CDE /* NATableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATableViewController.h; sourceTree = "<group>"; };
+		C6D54E7C1E60868A00DA1CDE /* NATableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NATableViewController.m; sourceTree = "<group>"; };
+		C6D54E801E60A2D700DA1CDE /* NATableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATableViewCell.h; sourceTree = "<group>"; };
+		C6D54E811E60A2D700DA1CDE /* NATableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NATableViewCell.m; sourceTree = "<group>"; };
+		C6D54E831E60E66B00DA1CDE /* NAArticlesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAArticlesViewController.h; sourceTree = "<group>"; };
+		C6D54E841E60E66B00DA1CDE /* NAArticlesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAArticlesViewController.m; sourceTree = "<group>"; };
+		C6D54E861E60E8B600DA1CDE /* NATableViewCellOnArticlesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATableViewCellOnArticlesViewController.h; sourceTree = "<group>"; };
+		C6D54E871E60E8B600DA1CDE /* NATableViewCellOnArticlesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NATableViewCellOnArticlesViewController.m; sourceTree = "<group>"; };
+		C6FD624B1E619FA5006DAB0C /* NAWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAWebViewViewController.h; sourceTree = "<group>"; };
+		C6FD624C1E619FA5006DAB0C /* NAWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAWebViewViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C6D54CD71E5EF84B00DA1CDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6D54E5B1E5F055300DA1CDE /* AFNetworking.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C6D54CD11E5EF84B00DA1CDE = {
+			isa = PBXGroup;
+			children = (
+				C6D54CDC1E5EF84E00DA1CDE /* NewsApp */,
+				C6D54CDB1E5EF84E00DA1CDE /* Products */,
+				C6D54E591E5F055200DA1CDE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C6D54CDB1E5EF84E00DA1CDE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C6D54CDA1E5EF84E00DA1CDE /* NewsApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6D54CDC1E5EF84E00DA1CDE /* NewsApp */ = {
+			isa = PBXGroup;
+			children = (
+				C6D54E5E1E5F087700DA1CDE /* Recources */,
+				C6D54E5D1E5F086900DA1CDE /* Sourrces */,
+			);
+			path = NewsApp;
+			sourceTree = "<group>";
+		};
+		C6D54E591E5F055200DA1CDE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6D54E5A1E5F055300DA1CDE /* AFNetworking.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C6D54E5D1E5F086900DA1CDE /* Sourrces */ = {
+			isa = PBXGroup;
+			children = (
+				C6D54E621E5F0BC900DA1CDE /* ViewController */,
+				C6D54E631E5F0BEB00DA1CDE /* API */,
+				C6D54E6E1E5FBE0500DA1CDE /* App */,
+				C6D54E6F1E5FBE4F00DA1CDE /* NAAppConstanst.h */,
+				C6D54E701E5FBE4F00DA1CDE /* NAAppConstanst.m */,
+			);
+			name = Sourrces;
+			sourceTree = "<group>";
+		};
+		C6D54E5E1E5F087700DA1CDE /* Recources */ = {
+			isa = PBXGroup;
+			children = (
+				C6D54CE61E5EF84F00DA1CDE /* Main.storyboard */,
+				C6D54CE91E5EF84F00DA1CDE /* Assets.xcassets */,
+				C6D54CEB1E5EF84F00DA1CDE /* LaunchScreen.storyboard */,
+				C6D54CEE1E5EF84F00DA1CDE /* Info.plist */,
+			);
+			name = Recources;
+			sourceTree = "<group>";
+		};
+		C6D54E621E5F0BC900DA1CDE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C6D54E741E607BCB00DA1CDE /* SWRevealViewController */,
+				C6FD624E1E619FAD006DAB0C /* MainView */,
+				C6FD62501E61A009006DAB0C /* ArticlesView */,
+				C6FD62511E61A071006DAB0C /* WebView */,
+				C6D54E7E1E60869100DA1CDE /* LeftView */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		C6D54E631E5F0BEB00DA1CDE /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C6D54E641E5F0C1000DA1CDE /* NAWebServices.h */,
+				C6D54E651E5F0C1000DA1CDE /* NAWebServices.m */,
+				C6D54E5F1E5F0BBC00DA1CDE /* NANewsAPI.h */,
+				C6D54E601E5F0BBC00DA1CDE /* NANewsAPI.m */,
+				C6D54E6B1E5F3A2000DA1CDE /* NADataManager.h */,
+				C6D54E6C1E5F3A2000DA1CDE /* NADataManager.m */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		C6D54E671E5F239C00DA1CDE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C6D54E861E60E8B600DA1CDE /* NATableViewCellOnArticlesViewController.h */,
+				C6D54E871E60E8B600DA1CDE /* NATableViewCellOnArticlesViewController.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		C6D54E6E1E5FBE0500DA1CDE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C6D54CE01E5EF84E00DA1CDE /* AppDelegate.h */,
+				C6D54CE11E5EF84E00DA1CDE /* AppDelegate.m */,
+				C6D54CDE1E5EF84E00DA1CDE /* main.m */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		C6D54E741E607BCB00DA1CDE /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C6D54E751E607BEF00DA1CDE /* SWRevealViewController.h */,
+				C6D54E761E607BEF00DA1CDE /* SWRevealViewController.m */,
+			);
+			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		C6D54E7E1E60869100DA1CDE /* LeftView */ = {
+			isa = PBXGroup;
+			children = (
+				C6D54E7F1E60A2B400DA1CDE /* Cell */,
+				C6D54E7B1E60868A00DA1CDE /* NATableViewController.h */,
+				C6D54E7C1E60868A00DA1CDE /* NATableViewController.m */,
+			);
+			name = LeftView;
+			sourceTree = "<group>";
+		};
+		C6D54E7F1E60A2B400DA1CDE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C6D54E801E60A2D700DA1CDE /* NATableViewCell.h */,
+				C6D54E811E60A2D700DA1CDE /* NATableViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		C6FD624E1E619FAD006DAB0C /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				C6FD624F1E619FE6006DAB0C /* Cell */,
+				C6D54CE31E5EF84E00DA1CDE /* NAMainViewController.h */,
+				C6D54CE41E5EF84E00DA1CDE /* NAMainViewController.m */,
+			);
+			name = MainView;
+			sourceTree = "<group>";
+		};
+		C6FD624F1E619FE6006DAB0C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C6D54E681E5F240C00DA1CDE /* NATableViewCellOnMainViewController.h */,
+				C6D54E691E5F240C00DA1CDE /* NATableViewCellOnMainViewController.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		C6FD62501E61A009006DAB0C /* ArticlesView */ = {
+			isa = PBXGroup;
+			children = (
+				C6D54E671E5F239C00DA1CDE /* Cell */,
+				C6D54E831E60E66B00DA1CDE /* NAArticlesViewController.h */,
+				C6D54E841E60E66B00DA1CDE /* NAArticlesViewController.m */,
+			);
+			name = ArticlesView;
+			sourceTree = "<group>";
+		};
+		C6FD62511E61A071006DAB0C /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				C6FD624B1E619FA5006DAB0C /* NAWebViewViewController.h */,
+				C6FD624C1E619FA5006DAB0C /* NAWebViewViewController.m */,
+			);
+			name = WebView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C6D54CD91E5EF84B00DA1CDE /* NewsApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6D54CF11E5EF84F00DA1CDE /* Build configuration list for PBXNativeTarget "NewsApp" */;
+			buildPhases = (
+				C6D54CD61E5EF84B00DA1CDE /* Sources */,
+				C6D54CD71E5EF84B00DA1CDE /* Frameworks */,
+				C6D54CD81E5EF84B00DA1CDE /* Resources */,
+				C6D54E5C1E5F05F300DA1CDE /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NewsApp;
+			productName = NewsApp;
+			productReference = C6D54CDA1E5EF84E00DA1CDE /* NewsApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C6D54CD21E5EF84B00DA1CDE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Anthony Zhdanov";
+				TargetAttributes = {
+					C6D54CD91E5EF84B00DA1CDE = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = X54BSWKVMH;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C6D54CD51E5EF84B00DA1CDE /* Build configuration list for PBXProject "NewsApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C6D54CD11E5EF84B00DA1CDE;
+			productRefGroup = C6D54CDB1E5EF84E00DA1CDE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C6D54CD91E5EF84B00DA1CDE /* NewsApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C6D54CD81E5EF84B00DA1CDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6D54CED1E5EF84F00DA1CDE /* LaunchScreen.storyboard in Resources */,
+				C6D54CEA1E5EF84F00DA1CDE /* Assets.xcassets in Resources */,
+				C6D54CE81E5EF84F00DA1CDE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C6D54E5C1E5F05F300DA1CDE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/AFNetworking.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C6D54CD61E5EF84B00DA1CDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6D54E7D1E60868A00DA1CDE /* NATableViewController.m in Sources */,
+				C6D54E661E5F0C1000DA1CDE /* NAWebServices.m in Sources */,
+				C6D54E611E5F0BBC00DA1CDE /* NANewsAPI.m in Sources */,
+				C6D54E6D1E5F3A2000DA1CDE /* NADataManager.m in Sources */,
+				C6D54CE51E5EF84E00DA1CDE /* NAMainViewController.m in Sources */,
+				C6FD624D1E619FA5006DAB0C /* NAWebViewViewController.m in Sources */,
+				C6D54E881E60E8B600DA1CDE /* NATableViewCellOnArticlesViewController.m in Sources */,
+				C6D54E711E5FBE4F00DA1CDE /* NAAppConstanst.m in Sources */,
+				C6D54E771E607BEF00DA1CDE /* SWRevealViewController.m in Sources */,
+				C6D54E6A1E5F240C00DA1CDE /* NATableViewCellOnMainViewController.m in Sources */,
+				C6D54CE21E5EF84E00DA1CDE /* AppDelegate.m in Sources */,
+				C6D54CDF1E5EF84E00DA1CDE /* main.m in Sources */,
+				C6D54E851E60E66B00DA1CDE /* NAArticlesViewController.m in Sources */,
+				C6D54E821E60A2D700DA1CDE /* NATableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C6D54CE61E5EF84F00DA1CDE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6D54CE71E5EF84F00DA1CDE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C6D54CEB1E5EF84F00DA1CDE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6D54CEC1E5EF84F00DA1CDE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C6D54CEF1E5EF84F00DA1CDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C6D54CF01E5EF84F00DA1CDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C6D54CF21E5EF84F00DA1CDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X54BSWKVMH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = NewsApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AZ.NewsApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C6D54CF31E5EF84F00DA1CDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X54BSWKVMH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = NewsApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AZ.NewsApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C6D54CD51E5EF84B00DA1CDE /* Build configuration list for PBXProject "NewsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6D54CEF1E5EF84F00DA1CDE /* Debug */,
+				C6D54CF01E5EF84F00DA1CDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6D54CF11E5EF84F00DA1CDE /* Build configuration list for PBXNativeTarget "NewsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6D54CF21E5EF84F00DA1CDE /* Debug */,
+				C6D54CF31E5EF84F00DA1CDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C6D54CD21E5EF84B00DA1CDE /* Project object */;
+}
