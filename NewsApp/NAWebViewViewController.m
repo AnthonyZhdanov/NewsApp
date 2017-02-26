@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.articlesWebView.delegate = self;
     //activity indicator setup
     self.webViewActivityIndicator.hidesWhenStopped = YES;
     self.webViewActivityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;

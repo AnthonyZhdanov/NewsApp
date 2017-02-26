@@ -13,6 +13,7 @@
 #import <AFnetworking/UIImageView+AFNetworking.h>
 #import "SWRevealViewController.h"
 #import "NAArticlesViewController.h"
+#import "NANewsModel.h"
 
 @interface NAMainViewController () <UITableViewDelegate, UITableViewDataSource, SWRevealViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -73,8 +74,18 @@
 }
 
 - (void)updateTableView {
-    //getting data from storage and then reloading tableView
+    //getting data from storage, creating objects by model and then reloading tableView
+    NSMutableArray *mutArrWithSources = [NSMutableArray new];
     self.newsArray = [[NANewsAPI sharedInstance] loadedData];
+    
+    for (NSDictionary *sourcesData in self.newsArray) {
+        NANewsModel *source = [[NANewsModel alloc] initWithSourceName:sourcesData[@"name"]
+                                                    sourceDescription:sourcesData[@"description"]
+                                                       sourceImageURL:sourcesData[@"urlsToLogos"][@"small"]
+                                                     sourceIdentifier:sourcesData[@"id"]];
+        [mutArrWithSources addObject:source];
+        self.newsArray = [mutArrWithSources copy];
+    }
     dispatch_async(dispatch_get_main_queue(), ^{
         //reload visible part of tableView
         [self.tableView reloadData];
@@ -89,24 +100,21 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellID = @"cell";
     NATableViewCellOnMainViewController *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
-    NSDictionary *newsList = self.newsArray[indexPath.row];
-    NSString *pathToImage;
+    NANewsModel *sourceItem = self.newsArray[indexPath.row];
     
     cell.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.3];
   
-    cell.headerTextLabel.text = newsList[@"name"];
-    cell.descriptionTextLabel.text = newsList[@"description"];
-    pathToImage = newsList[@"urlsToLogos"][@"small"];
-    NSURL *url = [NSURL URLWithString:pathToImage];
-   
-    [cell.newsLogoImageView setImageWithURL:url placeholderImage:[UIImage imageNamed:@"noImage"]];
+    cell.headerTextLabel.text = sourceItem.sourceName;
+    cell.descriptionTextLabel.text = sourceItem.sourceDescription;
+    
+    [cell.newsLogoImageView setImageWithURL:sourceItem.sourceImageURL placeholderImage:[UIImage imageNamed:@"noImage"]];
     return cell;
 }
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSDictionary *newsDict = self.newsArray[indexPath.row];
+    NANewsModel *newsItem = self.newsArray[indexPath.row];
     //assembling string with pass to articles by selected recource
-    self.articlesPath = [NSString stringWithFormat:@"%@%@%@", kArticlesList, newsDict[@"id"], kApiKey];
+    self.articlesPath = [NSString stringWithFormat:@"%@%@%@", kArticlesList, newsItem.sourceIdentifier, kApiKey];
     //performing segue to view controller which will show articles list to us
     [self performSegueWithIdentifier:@"showArticles" sender:self];
 }

@@ -25,6 +25,7 @@
 		C6D54E851E60E66B00DA1CDE /* NAArticlesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D54E841E60E66B00DA1CDE /* NAArticlesViewController.m */; };
 		C6D54E881E60E8B600DA1CDE /* NATableViewCellOnArticlesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D54E871E60E8B600DA1CDE /* NATableViewCellOnArticlesViewController.m */; };
 		C6FD624D1E619FA5006DAB0C /* NAWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD624C1E619FA5006DAB0C /* NAWebViewViewController.m */; };
+		C6FD62551E62DD0A006DAB0C /* NANewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C6FD62541E62DD0A006DAB0C /* NANewsModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,8 @@
 		C6D54E871E60E8B600DA1CDE /* NATableViewCellOnArticlesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NATableViewCellOnArticlesViewController.m; sourceTree = "<group>"; };
 		C6FD624B1E619FA5006DAB0C /* NAWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAWebViewViewController.h; sourceTree = "<group>"; };
 		C6FD624C1E619FA5006DAB0C /* NAWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAWebViewViewController.m; sourceTree = "<group>"; };
+		C6FD62531E62DD0A006DAB0C /* NANewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NANewsModel.h; sourceTree = "<group>"; };
+		C6FD62541E62DD0A006DAB0C /* NANewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NANewsModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,7 @@
 		C6D54E5D1E5F086900DA1CDE /* Sourrces */ = {
 			isa = PBXGroup;
 			children = (
+				C6FD62521E62DC9D006DAB0C /* Model */,
 				C6D54E621E5F0BC900DA1CDE /* ViewController */,
 				C6D54E631E5F0BEB00DA1CDE /* API */,
 				C6D54E6E1E5FBE0500DA1CDE /* App */,
@@ -242,6 +246,15 @@
 			name = WebView;
 			sourceTree = "<group>";
 		};
+		C6FD62521E62DC9D006DAB0C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C6FD62531E62DD0A006DAB0C /* NANewsModel.h */,
+				C6FD62541E62DD0A006DAB0C /* NANewsModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -346,6 +359,7 @@
 				C6D54CDF1E5EF84E00DA1CDE /* main.m in Sources */,
 				C6D54E851E60E66B00DA1CDE /* NAArticlesViewController.m in Sources */,
 				C6D54E821E60A2D700DA1CDE /* NATableViewCell.m in Sources */,
+				C6FD62551E62DD0A006DAB0C /* NANewsModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
