@@ -58,18 +58,8 @@
 }
 
 - (void)updateTableView {
-    //getting data from storage, creating objects by model and then reloading tableView
-    NSMutableArray *mutArrWithSources = [NSMutableArray new];
+    //getting data from storage
     self.arrayOfArticles = [[NANewsAPI sharedInstance] loadedData];
-    
-    for (NSDictionary *articlesData in self.arrayOfArticles) {
-        NANewsModel *article = [[NANewsModel alloc] initWithArticleTitle:articlesData[@"title"]
-                                                      articleDescription:articlesData[@"description"]
-                                                         articleImageURL:articlesData[@"urlToImage"]
-                                                          articlePageURL:articlesData[@"url"]];
-        [mutArrWithSources addObject:article];
-        self.arrayOfArticles = [mutArrWithSources copy];
-    }
     dispatch_async(dispatch_get_main_queue(), ^{
         //reload visible part of tableView
         [self.articlesTableView reloadData];

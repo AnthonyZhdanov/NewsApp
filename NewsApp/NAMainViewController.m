@@ -74,18 +74,8 @@
 }
 
 - (void)updateTableView {
-    //getting data from storage, creating objects by model and then reloading tableView
-    NSMutableArray *mutArrWithSources = [NSMutableArray new];
+    //getting data from storage
     self.newsArray = [[NANewsAPI sharedInstance] loadedData];
-    
-    for (NSDictionary *sourcesData in self.newsArray) {
-        NANewsModel *source = [[NANewsModel alloc] initWithSourceName:sourcesData[@"name"]
-                                                    sourceDescription:sourcesData[@"description"]
-                                                       sourceImageURL:sourcesData[@"urlsToLogos"][@"small"]
-                                                     sourceIdentifier:sourcesData[@"id"]];
-        [mutArrWithSources addObject:source];
-        self.newsArray = [mutArrWithSources copy];
-    }
     dispatch_async(dispatch_get_main_queue(), ^{
         //reload visible part of tableView
         [self.tableView reloadData];
@@ -125,4 +115,5 @@
     self.tableView.userInteractionEnabled =
     (revealController.frontViewPosition == FrontViewPositionRight ? NO : YES);
 }
+
 @end
