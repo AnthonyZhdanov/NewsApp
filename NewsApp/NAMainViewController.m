@@ -14,6 +14,7 @@
 #import "SWRevealViewController.h"
 #import "NAArticlesViewController.h"
 #import "NANewsModel.h"
+#import "NALoadingActivityIndicator.h"
 
 @interface NAMainViewController () <UITableViewDelegate, UITableViewDataSource, SWRevealViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -22,7 +23,6 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (strong, nonatomic) NSString *articlesPath;
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingActivityIndicator;
 
 @end
 
@@ -32,10 +32,7 @@
     [super viewDidLoad];
     self.revealViewController.delegate = self;
     //show indicator while data loading and parsing and setup
-    self.loadingActivityIndicator.hidesWhenStopped = YES;
-    self.loadingActivityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
-    self.loadingActivityIndicator.color = [UIColor whiteColor];
-    [self.loadingActivityIndicator startAnimating];
+    [[NALoadingActivityIndicator sharedLoadingActivityIndicator] showLoader];
     //background setup
     self.backgroundImageView.image = [UIImage imageNamed:@"backgroundImage"];
     self.tableView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
@@ -51,7 +48,7 @@
 
 #pragma mark - Private
 - (void)loadDataFromOutside:(NSString *)string {
-    [self.loadingActivityIndicator startAnimating];
+    [[NALoadingActivityIndicator sharedLoadingActivityIndicator] showLoader];
     [[NANewsAPI sharedInstance] loadDataWithString:string];
 }
 
@@ -68,7 +65,7 @@
     {
         [self.sidebarButton setImage:[UIImage imageNamed:@"sidebarButton"]];
         [self.sidebarButton setTarget: self.revealViewController];
-        [self.sidebarButton setAction: @selector( revealToggle: )];
+        [self.sidebarButton setAction: @selector(revealToggle:)];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
 }
@@ -79,8 +76,8 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         //reload visible part of tableView
         [self.tableView reloadData];
+        [[NALoadingActivityIndicator sharedLoadingActivityIndicator] hideLoader];
     });
-    [self.loadingActivityIndicator stopAnimating];
 }
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

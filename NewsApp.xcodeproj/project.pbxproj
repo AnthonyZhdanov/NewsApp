@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C68F83A31E795F970091F805 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68F83A21E795F970091F805 /* MBProgressHUD.framework */; };
+		C68F83A71E79615B0091F805 /* NALoadingActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = C68F83A61E79615B0091F805 /* NALoadingActivityIndicator.m */; };
+		C68F83A91E7975E90091F805 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68F83A81E7975E90091F805 /* CoreGraphics.framework */; };
 		C6D54CDF1E5EF84E00DA1CDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D54CDE1E5EF84E00DA1CDE /* main.m */; };
 		C6D54CE21E5EF84E00DA1CDE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D54CE11E5EF84E00DA1CDE /* AppDelegate.m */; };
 		C6D54CE51E5EF84E00DA1CDE /* NAMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D54CE41E5EF84E00DA1CDE /* NAMainViewController.m */; };
@@ -29,6 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C68F83A21E795F970091F805 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = Carthage/Build/iOS/MBProgressHUD.framework; sourceTree = "<group>"; };
+		C68F83A51E79615B0091F805 /* NALoadingActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NALoadingActivityIndicator.h; sourceTree = "<group>"; };
+		C68F83A61E79615B0091F805 /* NALoadingActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NALoadingActivityIndicator.m; sourceTree = "<group>"; };
+		C68F83A81E7975E90091F805 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C6D54CDA1E5EF84E00DA1CDE /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D54CDE1E5EF84E00DA1CDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C6D54CE01E5EF84E00DA1CDE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,13 +78,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C68F83A91E7975E90091F805 /* CoreGraphics.framework in Frameworks */,
 				C6D54E5B1E5F055300DA1CDE /* AFNetworking.framework in Frameworks */,
+				C68F83A31E795F970091F805 /* MBProgressHUD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C68F83A41E7960E90091F805 /* Activity Indicator */ = {
+			isa = PBXGroup;
+			children = (
+				C68F83A51E79615B0091F805 /* NALoadingActivityIndicator.h */,
+				C68F83A61E79615B0091F805 /* NALoadingActivityIndicator.m */,
+			);
+			name = "Activity Indicator";
+			sourceTree = "<group>";
+		};
 		C6D54CD11E5EF84B00DA1CDE = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +125,8 @@
 		C6D54E591E5F055200DA1CDE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C68F83A81E7975E90091F805 /* CoreGraphics.framework */,
+				C68F83A21E795F970091F805 /* MBProgressHUD.framework */,
 				C6D54E5A1E5F055300DA1CDE /* AFNetworking.framework */,
 			);
 			name = Frameworks;
@@ -115,6 +135,7 @@
 		C6D54E5D1E5F086900DA1CDE /* Sourrces */ = {
 			isa = PBXGroup;
 			children = (
+				C68F83A41E7960E90091F805 /* Activity Indicator */,
 				C6FD62521E62DC9D006DAB0C /* Model */,
 				C6D54E621E5F0BC900DA1CDE /* ViewController */,
 				C6D54E631E5F0BEB00DA1CDE /* API */,
@@ -331,6 +352,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/AFNetworking.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/MBProgressHUD.framework",
 			);
 			outputPaths = (
 			);
@@ -359,6 +381,7 @@
 				C6D54CDF1E5EF84E00DA1CDE /* main.m in Sources */,
 				C6D54E851E60E66B00DA1CDE /* NAArticlesViewController.m in Sources */,
 				C6D54E821E60A2D700DA1CDE /* NATableViewCell.m in Sources */,
+				C68F83A71E79615B0091F805 /* NALoadingActivityIndicator.m in Sources */,
 				C6FD62551E62DD0A006DAB0C /* NANewsModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

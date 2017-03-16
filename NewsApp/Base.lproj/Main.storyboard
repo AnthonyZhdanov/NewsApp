@@ -56,7 +56,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n3h-aK-c2C" id="XEo-Lj-Afk">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="129"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZlC-XU-acT">
@@ -108,20 +108,15 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="0ez-1P-106"/>
                                 </connections>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="f2f-OP-dZ8">
-                                <rect key="frame" x="177" y="323" width="20" height="20"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5b8-qL-jBf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="326-SU-TAZ"/>
-                            <constraint firstItem="f2f-OP-dZ8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3pK-d7-wJt"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5b8-qL-jBf" secondAttribute="bottom" id="6rw-9j-bp5"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kSo-YR-KcU" secondAttribute="bottom" id="AkJ-21-Dto"/>
                             <constraint firstItem="kSo-YR-KcU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FC0-sh-EeK"/>
                             <constraint firstItem="5b8-qL-jBf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LXS-13-hUJ"/>
                             <constraint firstItem="kSo-YR-KcU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Mak-e0-AtR"/>
-                            <constraint firstItem="f2f-OP-dZ8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="O5D-Tq-ubf"/>
                             <constraint firstAttribute="trailing" secondItem="5b8-qL-jBf" secondAttribute="trailing" id="hPV-5h-Rsv"/>
                             <constraint firstAttribute="trailing" secondItem="kSo-YR-KcU" secondAttribute="trailing" id="qEP-iu-RR9"/>
                         </constraints>
@@ -133,7 +128,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="backgroundImageView" destination="5b8-qL-jBf" id="wVS-oT-3jm"/>
-                        <outlet property="loadingActivityIndicator" destination="f2f-OP-dZ8" id="R9z-UA-PT1"/>
                         <outlet property="navigationBar" destination="pGZ-zR-jsq" id="NQ8-dq-2jU"/>
                         <outlet property="sidebarButton" destination="wWy-hT-u2c" id="UVd-aN-cGR"/>
                         <outlet property="tableView" destination="kSo-YR-KcU" id="i3B-fB-mPr"/>
@@ -167,7 +161,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="132"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LHr-mq-6rW" id="RpW-3W-isa">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="132"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P0I-I0-Up0">
@@ -219,19 +213,14 @@
                                     <outlet property="delegate" destination="mH9-IH-BPI" id="m5Z-Jh-QIi"/>
                                 </connections>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="W0R-js-jpN">
-                                <rect key="frame" x="177" y="323" width="20" height="20"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rxj-nt-swk" firstAttribute="leading" secondItem="XcJ-rM-say" secondAttribute="leading" id="1kD-9f-FEp"/>
                             <constraint firstAttribute="trailing" secondItem="rxj-nt-swk" secondAttribute="trailing" id="9YB-RM-Nxy"/>
                             <constraint firstItem="CND-Fz-RTQ" firstAttribute="leading" secondItem="XcJ-rM-say" secondAttribute="leading" id="PeG-zg-2IA"/>
-                            <constraint firstItem="W0R-js-jpN" firstAttribute="centerY" secondItem="XcJ-rM-say" secondAttribute="centerY" id="ZRq-Fd-gzs"/>
                             <constraint firstItem="CND-Fz-RTQ" firstAttribute="top" secondItem="Bqg-Gs-ase" secondAttribute="bottom" id="a9L-Hg-4mQ"/>
                             <constraint firstItem="3oC-EW-SFD" firstAttribute="top" secondItem="rxj-nt-swk" secondAttribute="bottom" id="hMa-e3-wZ4"/>
-                            <constraint firstItem="W0R-js-jpN" firstAttribute="centerX" secondItem="XcJ-rM-say" secondAttribute="centerX" id="kZf-TA-3N4"/>
                             <constraint firstItem="rxj-nt-swk" firstAttribute="top" secondItem="Bqg-Gs-ase" secondAttribute="bottom" id="oKT-jg-GG4"/>
                             <constraint firstAttribute="trailing" secondItem="CND-Fz-RTQ" secondAttribute="trailing" id="xj9-Ze-d2q"/>
                             <constraint firstItem="3oC-EW-SFD" firstAttribute="top" secondItem="CND-Fz-RTQ" secondAttribute="bottom" id="yYo-4h-ymV"/>
@@ -239,7 +228,6 @@
                     </view>
                     <connections>
                         <outlet property="articlesBackgroundImageView" destination="rxj-nt-swk" id="Uel-6E-0Bz"/>
-                        <outlet property="articlesLoadingActivityIndicator" destination="W0R-js-jpN" id="H3r-dl-WTO"/>
                         <outlet property="articlesTableView" destination="CND-Fz-RTQ" id="JbL-7t-v8a"/>
                         <segue destination="roI-6p-lsd" kind="show" identifier="showWebView" id="93S-uV-Fni"/>
                     </connections>
@@ -267,15 +255,10 @@
                                     <outlet property="delegate" destination="roI-6p-lsd" id="vpr-I8-mTI"/>
                                 </connections>
                             </webView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="dkB-Xb-YsL">
-                                <rect key="frame" x="177" y="323" width="20" height="20"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dkB-Xb-YsL" firstAttribute="centerX" secondItem="59K-X2-rAl" secondAttribute="centerX" id="4LS-md-sET"/>
                             <constraint firstItem="CiQ-8D-GHc" firstAttribute="top" secondItem="TGg-Zo-zFe" secondAttribute="bottom" id="8gJ-jB-bid"/>
-                            <constraint firstItem="dkB-Xb-YsL" firstAttribute="centerY" secondItem="59K-X2-rAl" secondAttribute="centerY" id="Hbm-M2-JMt"/>
                             <constraint firstItem="TGg-Zo-zFe" firstAttribute="top" secondItem="YAz-Gi-ocS" secondAttribute="bottom" id="XQV-wk-cwG"/>
                             <constraint firstItem="TGg-Zo-zFe" firstAttribute="leading" secondItem="59K-X2-rAl" secondAttribute="leading" id="eIC-aY-CGp"/>
                             <constraint firstAttribute="trailing" secondItem="TGg-Zo-zFe" secondAttribute="trailing" id="wp5-NC-RNM"/>
@@ -283,7 +266,6 @@
                     </view>
                     <connections>
                         <outlet property="articlesWebView" destination="TGg-Zo-zFe" id="Mtv-yY-hFb"/>
-                        <outlet property="webViewActivityIndicator" destination="dkB-Xb-YsL" id="8Jf-lk-J7H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="643-8x-aF4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -303,7 +285,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="79"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wae-Hz-38i" id="B8J-9M-tXf">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="78.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="srg-sz-832">

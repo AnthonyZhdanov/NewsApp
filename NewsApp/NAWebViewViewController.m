@@ -7,11 +7,11 @@
 //
 
 #import "NAWebViewViewController.h"
+#import "NALoadingActivityIndicator.h"
 
 @interface NAWebViewViewController () <UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *articlesWebView;
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *webViewActivityIndicator;
 
 @end
 
@@ -20,11 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.articlesWebView.delegate = self;
-    //activity indicator setup
-    self.webViewActivityIndicator.hidesWhenStopped = YES;
-    self.webViewActivityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
-    self.webViewActivityIndicator.color = [UIColor blackColor];
-    
+    [[NALoadingActivityIndicator sharedLoadingActivityIndicator] showLoader];
     if (self.urlToArticle) {
         //loadRequest by URL with page adress
         NSURLRequest *requestPage = [NSURLRequest requestWithURL:self.urlToArticle];
@@ -33,12 +29,14 @@
     // Do any additional setup after loading the view.
 }
 #pragma mark - UIWebViewDelegate
-- (void)webViewDidStartLoad:(UIWebView *)webView {
-    [self.webViewActivityIndicator startAnimating];
-}
+//- (void)webViewDidStartLoad:(UIWebView *)webView {
+//    
+//}
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-    [self.webViewActivityIndicator stopAnimating];
+    dispatch_async(dispatch_get_main_queue(), ^{;
+        [[NALoadingActivityIndicator sharedLoadingActivityIndicator] hideLoader];
+    });
 }
 
 @end

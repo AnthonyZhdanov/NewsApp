@@ -12,12 +12,12 @@
 #import <AFnetworking/UIImageView+AFNetworking.h>
 #import "NAWebViewViewController.h"
 #import "NANewsModel.h"
+#import "NALoadingActivityIndicator.h"
 
 @interface NAArticlesViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) NSArray *arrayOfArticles;
 @property (weak, nonatomic) IBOutlet UITableView *articlesTableView;
 @property (weak, nonatomic) IBOutlet UIImageView *articlesBackgroundImageView;
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *articlesLoadingActivityIndicator;
 @property (strong, nonatomic) NSURL *pathToArticle;
 
 @end
@@ -26,14 +26,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //show indicator while data loading and parsing and setup
-    self.articlesLoadingActivityIndicator.hidesWhenStopped = YES;
-    self.articlesLoadingActivityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
-    self.articlesLoadingActivityIndicator.color = [UIColor whiteColor];
-    [self.articlesLoadingActivityIndicator startAnimating];
+    //show indicator while data loading and parsing
+    [[NALoadingActivityIndicator sharedLoadingActivityIndicator] showLoader];
     //load data to display
     NSString *path = self.articlesPath;
-    [[NANewsAPI sharedInstance] loadDataWithString:path];
+    [self loadDataFromOutside:path];
     //background setup
     self.articlesBackgroundImageView.image = [UIImage imageNamed:@"backgroundImage"];
     self.articlesTableView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
@@ -63,8 +60,8 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         //reload visible part of tableView
         [self.articlesTableView reloadData];
+        [[NALoadingActivityIndicator sharedLoadingActivityIndicator] hideLoader];
     });
-    [self.articlesLoadingActivityIndicator stopAnimating];
 }
 
 #pragma mark - UITableViewDataSource
